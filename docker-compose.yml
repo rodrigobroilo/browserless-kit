@@ -1,0 +1,18 @@
+version: "3"
+services:
+  browserless:
+    image: ghcr.io/browserless/chromium:latest
+    container_name: browserless
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - TOKEN=your-browserless-token-here
+      - CONCURRENT=3
+      - QUEUED=5
+      - TIMEOUT=60000
+      - HEALTH=true
+    deploy:
+      resources:
+        limits:
+          memory: 2G

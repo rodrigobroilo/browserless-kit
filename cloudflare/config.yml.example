@@ -1,0 +1,10 @@
+tunnel: YOUR-TUNNEL-UUID
+credentials-file: /etc/cloudflared/YOUR-TUNNEL-UUID.json
+
+ingress:
+  # Browserless Chrome
+  - hostname: browserless.yourdomain.com
+    service: http://localhost:3000
+
+  # Catch-all (required by cloudflared)
+  - service: http_status:404

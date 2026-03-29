@@ -1,0 +1,25 @@
+# Build artifacts
+/target/
+/cli/target/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (NEVER commit these)
+*.env
+*.secret
+*.key
+*.pem
+*.json
+!package.json
+!Cargo.lock
+
+# Cloudflare credentials
+cloudflare/*.json
